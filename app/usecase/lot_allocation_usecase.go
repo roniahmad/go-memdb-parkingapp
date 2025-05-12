@@ -68,7 +68,7 @@ func (l *lotAllocationUsecase) Leave(carNumber string, hours int) error {
 	} else {
 		bill = chargeFirstTwoHour + ((hours - max) * chargeNextHour)
 	}
-	fmt.Printf("Registration number %s with Slot Number %d is free with Charge $%d \n", "KA-01-HH-3141", raw.(*model.LotAllocation).Lot, bill)
+	fmt.Printf("Registration number %s with Slot Number %d is free with Charge $%d \n", carNumber, raw.(*model.LotAllocation).Lot, bill)
 
 	return nil
 }
